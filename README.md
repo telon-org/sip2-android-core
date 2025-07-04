@@ -46,7 +46,6 @@ sip2-android-core/
 │       │       ├── PjSipService.java # Main SIP service
 │       │       ├── PjSipAccount.java # Account management
 │       │       ├── PjSipCall.java    # Call handling
-│       │       ├── PjActions.java    # Action definitions
 │       │       └── ...
 │       ├── jniLibs/                   # Native libraries (.so files)
 │       │   ├── arm64-v8a/
@@ -54,6 +53,21 @@ sip2-android-core/
 │       │   ├── x86/
 │       │   └── x86_64/
 │       └── AndroidManifest.xml
+├── integration/
+│   ├── react_native/                  # React Native integration files
+│   │   ├── dto/                      # DTO classes for React Native
+│   │   ├── utils/                    # Utility classes for React Native
+│   │   ├── PjSipModule.java         # React Native module
+│   │   ├── PjSipModulePackage.java  # React Native package
+│   │   ├── PjSipBroadcastReceiver.java # Broadcast receiver
+│   │   ├── PjActions.java           # Action definitions
+│   │   ├── PjSipRemoteVideoViewManager.java # Video view manager
+│   │   └── PjSipPreviewVideoViewManager.java # Preview view manager
+│   └── flutter/                      # Flutter integration files
+│       ├── dto/                      # DTO classes for Flutter
+│       ├── utils/                    # Utility classes for Flutter
+│       ├── PjActions.java           # Action definitions
+│       └── PjSipBroadcastReceiver.java # Broadcast receiver
 ├── build.gradle
 ├── package.json
 └── README.md
@@ -81,18 +95,30 @@ Handles individual call operations:
 - Audio/video control
 - Call actions (answer, hangup, hold, etc.)
 
-### PjActions
-Defines all available actions and events:
-- Action constants
-- Event names
-- Parameter definitions
-
 ### DTO Classes
 Data Transfer Objects for configuration:
 - `AccountConfigurationDTO` - Account settings
 - `CallSettingsDTO` - Call parameters
 - `ServiceConfigurationDTO` - Service settings
 - `SipMessageDTO` - SIP message data
+
+## Integration Components
+
+The library provides separate integration layers for different platforms:
+
+### React Native Integration (`integration/react_native/`)
+- `PjSipModule.java` - Main React Native module
+- `PjSipModulePackage.java` - React Native package
+- `PjSipBroadcastReceiver.java` - Event broadcasting
+- `PjActions.java` - Action definitions
+- `PjSipRemoteVideoViewManager.java` - Video view manager
+- `PjSipPreviewVideoViewManager.java` - Preview view manager
+- DTO classes and utilities
+
+### Flutter Integration (`integration/flutter/`)
+- `PjSipBroadcastReceiver.java` - Event broadcasting
+- `PjActions.java` - Action definitions
+- DTO classes and utilities
 
 ## Usage
 
