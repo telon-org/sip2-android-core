@@ -70,7 +70,7 @@ public class SipMessageDTO {
             if (headersData instanceof Map) {
                 @SuppressWarnings("unchecked")
                 Map<String, Object> headersMap = (Map<String, Object>) headersData;
-                Map<String, String> headers = new HashMap<>();
+            Map<String, String> headers = new HashMap<>();
 
                 for (Map.Entry<String, Object> entry : headersMap.entrySet()) {
                     String key = entry.getKey();
@@ -78,10 +78,10 @@ public class SipMessageDTO {
                     if (value instanceof String) {
                         headers.put(key, (String) value);
                     }
-                }
-
-                result.setHeaders(headers);
             }
+
+            result.setHeaders(headers);
+        }
         }
         if (data.containsKey("contentType")) {
             Object value = data.get("contentType");

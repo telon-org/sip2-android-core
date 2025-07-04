@@ -24,8 +24,7 @@ import org.telon.sip2.dto.ServiceConfigurationDTO;
 import org.telon.sip2.dto.SipMessageDTO;
 import org.telon.sip2.utils.ArgumentUtils;
 
-import com.facebook.react.bridge.ReadableMap;
-import com.facebook.react.bridge.ReadableMapKeySetIterator;
+import java.util.Map;
 
 import org.json.JSONObject;
 import org.pjsip.pjsua2.AccountConfig;
