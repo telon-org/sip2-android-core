@@ -1,4 +1,4 @@
-package one.telefon.sip2;
+package org.telon.sip2;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -18,11 +18,11 @@ import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
-import one.telefon.sip2.dto.AccountConfigurationDTO;
-import one.telefon.sip2.dto.CallSettingsDTO;
-import one.telefon.sip2.dto.ServiceConfigurationDTO;
-import one.telefon.sip2.dto.SipMessageDTO;
-import one.telefon.sip2.utils.ArgumentUtils;
+import org.telon.sip2.dto.AccountConfigurationDTO;
+import org.telon.sip2.dto.CallSettingsDTO;
+import org.telon.sip2.dto.ServiceConfigurationDTO;
+import org.telon.sip2.dto.SipMessageDTO;
+import org.telon.sip2.utils.ArgumentUtils;
 
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableMapKeySetIterator;
